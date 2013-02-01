@@ -11,7 +11,7 @@ public class ServiceWrapperGlue {
         if (argv.length == 2 && "stop".equals(argv[0])) {
             ruby.evalScriptlet(format("%s.instance.stop", argv[1]));
         } else {
-            throw new IllegalArgumentException("Incorrect usage!");
+            throw new IllegalArgumentException("Usage: ServiceWrapperGlue <stop> <RubyClassName>");
         }
     }
 }
